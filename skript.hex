@@ -1,0 +1,331 @@
+input.onLogoEvent(TouchButtonEvent.Pressed, function () {
+    basic.showNumber(VZahl)
+    basic.pause(2000)
+    basic.showLeds(`
+        . . . . .
+        . . . . .
+        . . # . .
+        . . . . .
+        . . . . .
+        `)
+})
+input.onButtonPressed(Button.A, function () {
+    Zahl = randint(0, 20)
+    if (Zahl > VZahl) {
+        Punkte += 1
+        basic.showNumber(Zahl)
+    }
+    if (VZahl > Zahl) {
+        Punkte += -1
+        basic.showNumber(Zahl)
+    }
+    if (Zahl == VZahl) {
+        Punkte += 0
+        basic.showNumber(Zahl)
+    }
+    basic.pause(5000)
+    basic.showLeds(`
+        . # # # .
+        . # . # .
+        . # # # .
+        . # . . .
+        . # . . .
+        `)
+    basic.showLeds(`
+        . . . . .
+        # # # # #
+        . . . . .
+        # # # # #
+        . . . . .
+        `)
+    basic.showNumber(Punkte)
+    basic.pause(5000)
+    basic.showLeds(`
+        # # # # #
+        . . . # .
+        . . # . .
+        . # . . .
+        # # # # #
+        `)
+    basic.showLeds(`
+        . . . . .
+        # # # # #
+        . . . . .
+        # # # # #
+        . . . . .
+        `)
+    basic.showNumber(Zahl)
+    basic.pause(100)
+    VZahl = Zahl
+    basic.showLeds(`
+        . . . . .
+        . . . . .
+        . . # . .
+        . . . . .
+        . . . . .
+        `)
+})
+input.onButtonPressed(Button.AB, function () {
+    Punkte = 10
+    VZahl = randint(0, 10)
+    if (VZahl == 0) {
+        basic.showLeds(`
+            . # # # .
+            . # . # .
+            . # . # .
+            . # . # .
+            . # # # .
+            `)
+    }
+    if (VZahl == 1) {
+        basic.showLeds(`
+            . . # . .
+            . # # . .
+            . . # . .
+            . . # . .
+            . # # # .
+            `)
+    }
+    if (VZahl == 2) {
+        basic.showLeds(`
+            . # # # .
+            . . . # .
+            . # # . .
+            . # . . .
+            . # # # .
+            `)
+    }
+    if (VZahl == 3) {
+        basic.showLeds(`
+            . # # # .
+            . . . # .
+            . # # # .
+            . . . # .
+            . # # # .
+            `)
+    }
+    if (VZahl == 3) {
+        basic.showLeds(`
+            . # # # .
+            . . . # .
+            . # # # .
+            . . . # .
+            . # # # .
+            `)
+    }
+    if (VZahl == 3) {
+        basic.showLeds(`
+            . # # # .
+            . . . # .
+            . # # # .
+            . . . # .
+            . # # # .
+            `)
+    }
+    if (VZahl == 4) {
+        basic.showLeds(`
+            . . . # .
+            . . # # .
+            . # . # .
+            . # # # .
+            . . . # .
+            `)
+    }
+    if (VZahl == 5) {
+        basic.showLeds(`
+            . # # # .
+            . # . . .
+            . # # # .
+            . . . # .
+            . # # # .
+            `)
+    }
+    if (VZahl == 6) {
+        basic.showLeds(`
+            . # # # .
+            . # . . .
+            . # # # .
+            . # . # .
+            . # # # .
+            `)
+    }
+    if (VZahl == 7) {
+        basic.showLeds(`
+            . # # # .
+            . . . # .
+            . . . # .
+            . . # . .
+            . . # . .
+            `)
+    }
+    if (VZahl == 8) {
+        basic.showLeds(`
+            . # # # .
+            . # . # .
+            . # # # .
+            . # . # .
+            . # # # .
+            `)
+    }
+    if (VZahl == 9) {
+        basic.showLeds(`
+            . # # # .
+            . # . # .
+            . # # # .
+            . . . # .
+            . # # # .
+            `)
+    }
+    if (VZahl == 10) {
+        basic.showLeds(`
+            # . # # #
+            # . # . #
+            # . # . #
+            # . # . #
+            # . # # #
+            `)
+    }
+    basic.pause(2000)
+    basic.showLeds(`
+        . # # # .
+        . # . # .
+        . # # # .
+        . # . . .
+        . # . . .
+        `)
+    basic.showLeds(`
+        . . . . .
+        # # # # #
+        . . . . .
+        # # # # #
+        . . . . .
+        `)
+    basic.showLeds(`
+        # . # # #
+        # . # . #
+        # . # . #
+        # . # . #
+        # . # # #
+        `)
+    basic.pause(100)
+    basic.showLeds(`
+        . . . . .
+        . . . . .
+        . . # . .
+        . . . . .
+        . . . . .
+        `)
+})
+input.onButtonPressed(Button.B, function () {
+    Zahl = randint(0, 20)
+    if (Zahl < VZahl) {
+        Punkte += 1
+        basic.showNumber(Zahl)
+    }
+    if (VZahl < Zahl) {
+        Punkte += -1
+        basic.showNumber(Zahl)
+    }
+    if (Zahl == VZahl) {
+        Punkte += 0
+        basic.showNumber(Zahl)
+    }
+    basic.pause(2000)
+    basic.showLeds(`
+        . # # # .
+        . # . # .
+        . # # # .
+        . # . . .
+        . # . . .
+        `)
+    basic.showLeds(`
+        . . . . .
+        # # # # #
+        . . . . .
+        # # # # #
+        . . . . .
+        `)
+    basic.showNumber(Punkte)
+    basic.pause(200)
+    basic.showLeds(`
+        # # # # #
+        . . . # .
+        . . # . .
+        . # . . .
+        # # # # #
+        `)
+    basic.showLeds(`
+        . . . . .
+        # # # # #
+        . . . . .
+        # # # # #
+        . . . . .
+        `)
+    basic.showNumber(Zahl)
+    basic.pause(100)
+    VZahl = Zahl
+    basic.showLeds(`
+        . . . . .
+        . . . . .
+        . . # . .
+        . . . . .
+        . . . . .
+        `)
+})
+let Zahl = 0
+let VZahl = 0
+let Punkte = 0
+Punkte = 10
+basic.showLeds(`
+    . # # # .
+    . # . # .
+    . # # # .
+    . # . . .
+    . # . . .
+    `)
+basic.showLeds(`
+    . . . . .
+    # # # # #
+    . . . . .
+    # # # # #
+    . . . . .
+    `)
+basic.showNumber(Punkte)
+basic.pause(1000)
+basic.showLeds(`
+    . . . . .
+    . . . . .
+    . . # . .
+    . . . . .
+    . . . . .
+    `)
+basic.forever(function () {
+    if (Punkte == 20) {
+        basic.showString("YOU WIN !")
+        basic.showLeds(`
+            . # . # .
+            . # . # .
+            . . . . .
+            # . . . #
+            # # # # #
+            `)
+        basic.pause(100)
+        basic.showString("NEUES SPIEL ! PUNKTE = 10 ! ")
+        Punkte = 10
+        basic.showString("Drücke AB")
+    }
+    if (Punkte == 0) {
+        basic.showString("YOU LOSE ! ")
+        basic.showLeds(`
+            . # . # .
+            . # . # .
+            . . . . .
+            # # # # #
+            # . . . #
+            `)
+        basic.pause(100)
+        basic.showString("NEUES SPIEL ! PUNKTE = 10 ! ")
+        Punkte = 10
+        basic.showString("Drücke AB")
+    }
+})
